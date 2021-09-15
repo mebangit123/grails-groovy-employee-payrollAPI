@@ -1,22 +1,25 @@
 package com.bridgelabz
 
-import grails.rest.Resource
-import org.springframework.scheduling.quartz.LocalDataSourceJobStore
-
 import java.time.LocalDate
-@Resource(uri = "/api")
+
 class EmployeeModel {
     Long id
     String name
-    Integer age
-    LocalDate joined
+    String gender
+    String profile
+    LocalDate startDate
     Long salary
+    String department
+    String note
     static constraints = {
         id blank: false, unique: true
         name blank: false
-        age blank: false
-        joined blank: false
+        gender blank: false
+        profile blank: true
+        department blank: false
         salary blank: false
+        startDate blank: false
+        note blank: true
     }
     static mapping = {
         table "employee"

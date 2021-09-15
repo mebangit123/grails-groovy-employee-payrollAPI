@@ -7,11 +7,7 @@ class EmployeeService {
 
     EmployeeModel employeeModel
 
-
-    def serviceMethod() {
-
-    }
-    create() {
-        employeeModel.save(params)
+    def getAll() {
+        return employeeModel.list()
     }
 }
