@@ -3,7 +3,7 @@ package com.bridgelabz
 import grails.testing.services.ServiceUnitTest
 import spock.lang.Specification
 
-class EmployeeServiceSpec extends Specification implements ServiceUnitTest<EmployeeService>{
+class EmployeeControllerServiceSpec extends Specification implements ServiceUnitTest<EmployeeService>{
 
     def setup() {
     }

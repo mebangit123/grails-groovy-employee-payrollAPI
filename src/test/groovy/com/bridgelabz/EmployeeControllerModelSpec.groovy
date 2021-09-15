@@ -3,7 +3,7 @@ package com.bridgelabz
 import grails.testing.gorm.DomainUnitTest
 import spock.lang.Specification
 
-class EmployeeModelSpec extends Specification implements DomainUnitTest<EmployeeModel> {
+class EmployeeControllerModelSpec extends Specification implements DomainUnitTest<Employee> {
 
     def setup() {
     }

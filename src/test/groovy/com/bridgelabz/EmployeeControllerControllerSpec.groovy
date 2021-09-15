@@ -3,7 +3,7 @@ package com.bridgelabz
 import grails.testing.web.controllers.ControllerUnitTest
 import spock.lang.Specification
 
-class EmployeeControllerSpec extends Specification implements ControllerUnitTest<EmployeeController> {
+class EmployeeControllerControllerSpec extends Specification implements ControllerUnitTest<EmployeeController> {
 
     def setup() {
     }

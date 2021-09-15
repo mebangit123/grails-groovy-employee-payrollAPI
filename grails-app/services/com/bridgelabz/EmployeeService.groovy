@@ -5,9 +5,9 @@ import grails.gorm.transactions.Transactional
 @Transactional
 class EmployeeService {
 
-    EmployeeModel employeeModel
+    Employee employee
 
     def getAll() {
-        return employeeModel.list()
+        return employee.findAll()
     }
 }

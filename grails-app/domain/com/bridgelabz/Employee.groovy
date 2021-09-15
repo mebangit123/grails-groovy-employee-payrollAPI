@@ -2,7 +2,7 @@ package com.bridgelabz
 
 import java.time.LocalDate
 
-class EmployeeModel {
+class Employee {
     Long id
     String name
     String gender
