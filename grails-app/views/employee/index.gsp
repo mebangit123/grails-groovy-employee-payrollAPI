@@ -12,7 +12,7 @@
         <div class="detail">
             <div class="company-detail">
                 Employee Details
-                <div class="emp-count">10</div>
+                <div class="emp-count">${employeeList.size()}</div>
             </div>
             <div class="button-text">
                 <a class="add-button" href="${createLink(controller: 'employee', action: 'create')}"><asset:image src="add-24px.svg" alt="Plus Icon"/> Add User</a>
@@ -29,17 +29,26 @@
                     <th>StartDate</th>
                     <th class="action-row">Actions</th>
                 </tr>
-                <g:each in="${employees}" var="employee">
+                <g:each in="${employeeList}" var="employee">
                     <tr>
                         <td>Profile</td>
                         <td>${employee.name}</td>
                         <td>${employee.gender}</td>
-                        <td>${employee.department}</td>
+                        <td>
+                            <g:each in="${employee.department}" var="dept">
+                                <div class="dept-label">
+                                    ${dept}
+                                </div>
+                            </g:each>
+                        </td>
                         <td>${employee.salary}</td>
                         <td>${employee.startDate}</td>
                         <td>
-                            <asset:image src="delete-black-18dp.svg" />
-                            <asset:image src="create-black-18dp.svg" />
+                            <g:link controller="employee" action="delete" id="${employee.id}">
+                                <g:img dir="../assets/icons/" file="delete-black-18dp.svg" alt="delete"/>
+                            </g:link>
+                            <g:link controller="employee" action="edit" id="${employee.id}"><g:img (click)="update(employee)" dir="../assets/icons/" file="create-black-18dp.svg" alt="edit" />
+                            </g:link>
                         </td>
                     </tr>
                 </g:each>

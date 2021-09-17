@@ -7,7 +7,7 @@ class UrlMappings {
                 // apply constraints here
             }
         }
-        "/"( controller:"employee", action: "all")
+        "/"( controller:"employee", action: "index")
         "500"(view:'/error')
         "404"(view:'/notFound')
     }

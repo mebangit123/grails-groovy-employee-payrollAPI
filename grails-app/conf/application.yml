@@ -107,11 +107,11 @@ dataSource:
 environments:
     development:
         dataSource:
-            dbCreate: create-drop
+            dbCreate: update
             driverClassName: com.mysql.cj.jdbc.Driver
             username: root
             password: meban@123
-            url: "jdbc:mysql://localhost:3306/employee_payroll_api?useUnicode=yes&characterEncoding=UTF-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC"
+            url: "jdbc:mysql://localhost:3306/groovy_payrolldb?useUnicode=yes&characterEncoding=UTF-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC"
     test:
         dataSource:
             dbCreate: update
@@ -138,3 +138,5 @@ environments:
                 testOnReturn: false
                 jdbcInterceptors: ConnectionState
                 defaultTransactionIsolation: 2 # TRANSACTION_READ_COMMITTED
+server:
+    port: 8081
