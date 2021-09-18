@@ -31,7 +31,7 @@
                 </tr>
                 <g:each in="${employeeList}" var="employee">
                     <tr>
-                        <td>Profile</td>
+                        <td><asset:image src="${employee.profile}" alt="profile" /></td>
                         <td>${employee.name}</td>
                         <td>${employee.gender}</td>
                         <td>
@@ -47,7 +47,8 @@
                             <g:link controller="employee" action="delete" id="${employee.id}">
                                 <g:img dir="../assets/icons/" file="delete-black-18dp.svg" alt="delete"/>
                             </g:link>
-                            <g:link controller="employee" action="edit" id="${employee.id}"><g:img (click)="update(employee)" dir="../assets/icons/" file="create-black-18dp.svg" alt="edit" />
+                            <g:link controller="employee" action="edit" id="${employee.id}">
+                                <g:img (click)="update(employee)" dir="../assets/icons/" file="create-black-18dp.svg" alt="edit" />
                             </g:link>
                         </td>
                     </tr>

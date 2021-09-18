@@ -17,7 +17,8 @@
             <div class="buttonParent">
                 <a href="${createLink(controller: 'employee', action: 'index')}" class="resetButton button cancelButton">Cancel</a>
                 <div class="submit-reset">
-                    <g:actionSubmit class="button submitButton" value="Submit" />
+                    <button type="submit" onclick="" class="submitButton button">Submit</button>
+%{--                    <g:actionSubmit class="button submitButton" value="Submit" />--}%
                     <button type="reset" onclick="" class="resetButton button">Reset</button>
                 </div>
             </div>

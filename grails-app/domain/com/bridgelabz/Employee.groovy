@@ -7,9 +7,9 @@ class Employee {
     String name
     String gender
     String profile
-    LocalDate startDate
+    Date startDate
     Long salary
-    String[] department
+    List<String> department = ['HR','Sales','Finance','Engineer','Others']
     String note
     static constraints = {
         id blank: false, unique: true
@@ -25,6 +25,6 @@ class Employee {
         table "employee"
     }
     String toString() {
-        return name
+        return name+" "+department
     }
 }

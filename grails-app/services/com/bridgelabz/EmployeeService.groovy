@@ -19,14 +19,14 @@ class EmployeeService {
 
     def save(GrailsParameterMap params) {
         Employee employee = new Employee(params)
-        def response = AppUtil.saveResponse(false, employee)
-        if (employee.validate()) {
-            employee.save(flush: true)
-            if (!employee.hasErrors()) {
-                response.isSuccess = true
-            }
-        }
-        return response
+//        def response = AppUtil.saveResponse(false, employee)
+//        if (employee.validate()) {
+        employee.save(flush: true)
+//            if (!employee.hasErrors()) {
+//                response.isSuccess = true
+//            }
+//        }
+//        return response
     }
     def update(Employee employee, GrailsParameterMap params) {
         employee.properties = params
